@@ -49,11 +49,12 @@ int main()
     int a[10000], n, i;
     printf("Enter the size of array\n ");
     scanf("%d", &n);
-    for (i = 0;i < n;i++)
-        a[i] = rand();
     printf("Array elements are\n");
     for (i = 0;i < n;i++)
+    {
+        a[i] = rand();
         printf("%d\t", a[i]);
+    }
     quicksort(a, 0, n - 1);
     printf("\nSorted element are\n");
     for (i = 0; i < n; i++)
