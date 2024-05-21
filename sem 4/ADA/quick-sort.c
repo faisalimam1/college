@@ -46,7 +46,7 @@ void quicksort(int a[], int l, int r)
 
 int main() 
 {
-    int a[], n, i;
+    int a[10000], n, i;
     printf("Enter the size of array\n ");
     scanf("%d", &n);
     for (i = 0;i < n;i++)
