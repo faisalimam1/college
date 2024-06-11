@@ -16,17 +16,17 @@ void souceremoval()
 {
     int removed[10] = { 0 };
     printf("Topological order=\n");
-    for (int count = 0;count < n;count++) 
+    for (i= 0;i < n; i++) 
     {
         calculate();
-        for (i = 0;i < n;i++) 
+        for (j = 0;j < n;j++) 
         {
-            if (removed[i] == 0 && indegree[i] == 0)
+            if (removed[j] == 0 && indegree[j] == 0)
                 break;
         }
         if (i == n) 
         {
-            printf("Graph is cyclic\nNo solution\n");
+            printf("Graph is cyclic\n");
             return;
         }
         printf("%d ", i);
