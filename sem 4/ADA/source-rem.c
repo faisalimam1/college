@@ -1,51 +1,51 @@
+//source removal
+
 #include<stdio.h>
 
-int indegree[10], cost[10][10], n,i,j;
-
+int indegree[10], cost[10][10], n;
 void calculate() 
 {
-    for (i = 0;i < n;i++) 
+    for (int i = 0;i < n;i++) 
     {
         indegree[i] = 0;
-        for (j = 0;j < n;j++)
+        for (int j = 0;j < n;j++)
             indegree[i] += cost[j][i];
     }
 }
 
 void souceremoval() 
 {
-    int removed[10] = { 0 };
+    int removed[10] = { 0 }, i;
     printf("Topological order=\n");
-    for (i= 0;i < n; i++) 
+    for (int count = 0;count < n;count++)
     {
-        calculate();
-        for (j = 0;j < n;j++) 
+         calculate();
+         for (i = 0;i < n;i++) 
         {
-            if (removed[j] == 0 && indegree[j] == 0)
-                break;
+            if (removed[i] == 0 && indegree[i] == 0)
+                 break;
         }
         if (i == n) 
         {
-            printf("Graph is cyclic\n");
+            printf("Graph is cyclic\nNo solution\n");
             return;
         }
-        printf("%d ", i);
+        printf("%d\t", i);
         removed[i] = 1;
         for (int k = 0;k < n;k++)
             cost[i][k] = 0;
     }
 }
 
-int main() 
+void main() 
 {
-    
     printf("Enter the no. of vertices: ");
     scanf("%d", &n);
-    printf("Enter the adj/cost matrix\n");
-    for (i = 0;i < n;i++) {
-        for (j = 0;j < n;j++)
+    printf("Enter the adj matrix\n");
+    for (int i = 0;i < n;i++) 
+    {
+        for (int j = 0;j < n;j++)
             scanf("%d", &cost[i][j]);
     }
     souceremoval();
-  return 0;
 }
