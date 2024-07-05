@@ -48,8 +48,12 @@ int main() {
     printf("Enter the value of N: ");
     scanf("%d", &n);
     a = (int*)malloc(n * sizeof(int));
+    printf("Elements are\n");
     for (i = 0;i < n;i++)
-        a[i] = rand() % 1001;
+        {
+           a[i] = rand() % 1001;
+           printf("%d\t",a[i]);
+       } 
     mergesort(a, n);
     printf("\nSorted element are\n");
     for (i = 0; i < n; i++)
