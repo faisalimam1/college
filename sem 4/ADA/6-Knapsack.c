@@ -1,4 +1,4 @@
-
+//knapsack using dp
 #include <stdio.h>
 
 int max(int a, int b) {
