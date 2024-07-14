@@ -1,4 +1,5 @@
 //prims
+//prg 2
 #include<stdio.h>
 
 void prims(int n, int s, int cost[][10]) 
