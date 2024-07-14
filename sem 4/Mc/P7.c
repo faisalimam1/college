@@ -1,4 +1,4 @@
-//Simulate a microcontroller program en e for AeM to sort numbers asconding (descending order bubble sort. in using
+//Simulate a microcontroller program in C for ARM microcontroller to sort numbers in asconding/descending order using bubble sort
 
 #include <stdio.h>
 #include <lpc214x.h>
