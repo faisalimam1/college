@@ -2,7 +2,7 @@
 ENTRY
 START
     MOV R1, #0x6400
-    MUL R2, #0x3200
+    MOV R2, #0x3200
     ADD R3,R1,R2
 XS B XS
     END
