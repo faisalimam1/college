@@ -1,4 +1,5 @@
 // warshals
+//prg 3b
 
 #include<stdio.h>
 
