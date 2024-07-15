@@ -1,3 +1,4 @@
+
 //Design and implement C/C++ Program to find shortest paths from a given vertex in a weighted connected graph to other vertices using Dijkstra's algorithm.
 
 #include<stdio.h>
@@ -51,13 +52,13 @@ int main()
 	printf("Enter the source vertex:"); 
 	scanf("%d", &source);
 	dijkstra(source);
-	printf("the shortest distance is..."); 
+	printf("the shortest distance is...\n"); 
 	for(int i=0; i<n; i++)
 		printf("Cost from %d to %d is %d\n",source,i,dist[i]);
 
 }
 
-/* Sample Input and Output:
+/* 
 
 Enter the no. of vertices:5
 
@@ -75,7 +76,8 @@ Enter the cost matrix
 
 Enter the source vertex:0
 
-the shortest distance is... Cost from 0 to 0 is O
+the shortest distance is... 
+Cost from 0 to 0 is O
 
 Cost from 0 to 1 is 3
 
