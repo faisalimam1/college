@@ -1,3 +1,4 @@
+
 // merge sort using DMA
 //prog 11
 
@@ -24,7 +25,7 @@ void merge(int b[], int c[], int a[], int p, int q) {
 }
 
 void mergesort(int a[], float n) {
-    int* b, * c, i,j=0, p, q;
+    int *b, *c, i,j=0, p, q;
 
     if (n > 1) {
         p = floor(n / 2);
@@ -52,13 +53,23 @@ int main() {
     printf("Elements are\n");
     for (i = 0;i < n;i++)
         {
-           a[i] = rand() % 1001;
+           a[i] = rand();
            printf("%d\t",a[i]);
        } 
     mergesort(a, n);
     printf("\nSorted element are\n");
     for (i = 0; i < n; i++)
-        printf("%d\n", a[i]);
+        printf("%d\t", a[i]);
     printf("\nBasic Operation Count=%d", count);
     free(a);
 }
+
+/*
+Enter the value of N: 5
+Elements are
+41      18467   6334    26500   19169
+Sorted element are
+41	6334	18467	19169	26500
+
+Basic Operation Count=6
+*/
