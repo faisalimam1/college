@@ -4,33 +4,33 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int count = 0;
+static int count = 0;
 
 void SelectionSort(int arr[], int n) 
 {
-    int i, j, pos, temp;
+    int i, j, min, temp;
     for (i = 0; i < n - 1; i++) 
     {
-        pos = i;
+        min = i;
         for (j = i + 1; j < n; j++) 
         {
             count++;
-            if (arr[j] < arr[pos]) 
+            if (arr[j] < arr[min]) 
             {
-                pos = j;
+                min = j;
             }
         
         
-            temp = arr[pos];
-            arr[pos] = arr[i];
-            arr[i] = temp;
+            temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
         }
     }
 }
 
 void main() 
 {
-    int n, arr[1000], i;
+    int n, arr[5000], i;
     printf("Enter the size of array\n ");
     scanf("%d", &n);
     printf("Array elements are\n");
@@ -47,3 +47,13 @@ void main()
 
 
 }
+
+/*
+Enter the size of array
+ 5
+Array elements are
+41       18467   6334    26500   19169
+Sorted Elements are
+41      6334    18467   19169   26500
+Basic Operation Count= 10
+*/
