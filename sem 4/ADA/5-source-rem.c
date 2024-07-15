@@ -4,7 +4,7 @@
 #include<stdio.h>
 
 int indegree[10], cost[10][10], n;
-void calculate() 
+void calc_ind() 
 {
     for (int i = 0;i < n;i++) 
     {
@@ -16,25 +16,25 @@ void calculate()
 
 void souceremoval() 
 {
-    int removed[10] = { 0 }, i;
-    printf("Topological order=\n");
-    for (int count = 0;count < n;count++)
+    int removed[10] = { 0 }, i,j;
+    printf("Topological order\n");
+    for (i= 0;i< n;i++)
     {
-         calculate();
-         for (i = 0;i < n;i++) 
+         calc_ind();
+         for (j= 0;j < n;j++) 
         {
-            if (removed[i] == 0 && indegree[i] == 0)
+            if (removed[j] == 0 && indegree[j] == 0)
                  break;
         }
-        if (i == n) 
+        if (j==n) 
         {
-            printf("Graph is cyclic\nNo solution\n");
+            printf("Graph is cyclic\n");
             return;
         }
-        printf("%d\t", i);
-        removed[i] = 1;
+        printf("%d\t", j);
+        removed[j] = 1;
         for (int k = 0;k < n;k++)
-            cost[i][k] = 0;
+            cost[j][k] = 0;
     }
 }
 
@@ -50,3 +50,25 @@ void main()
     }
     souceremoval();
 }
+/*
+Enter the no. of vertices: 4
+Enter the adj matrix
+0 1 0 0
+0 0 0 1
+0 0 0 1
+1 0 0 0
+Topological order
+2       Graph is cyclic
+*/
+
+/*
+Enter the no. of vertices: 5
+Enter the adj matrix
+0 1 1 0 0
+0 0 0 1 1
+0 0 0 1 0
+0 0 0 0 1
+0 0 0 0 0
+Topological order
+0       1       2       3       4
+*/
