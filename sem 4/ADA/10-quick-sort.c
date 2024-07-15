@@ -1,3 +1,4 @@
+
 // quicksort
 //prg 10
 
@@ -6,16 +7,16 @@
 
 static int count = 0;
 
-int partition(int a[], int l, int r) 
+int partition(int a[], int l, int n) 
 {
-    int pivot = a[l], i = l, j = r + 1, temp;
+    int pivot = a[l], i = l, j = n + 1, temp;
     do 
     {
         do 
         {
             i++;
             count++;
-        } while (i < r && a[i] < pivot);
+        } while (i < n && a[i] < pivot);
         do 
         {
             j--;
@@ -34,14 +35,14 @@ int partition(int a[], int l, int r)
     return j;
 }
 
-void quicksort(int a[], int l, int r) 
+void quicksort(int a[], int l, int n) 
 {
     int s;
-    if (l < r) 
+    if (l < n) 
     {
-        s = partition(a, l, r);
+        s = partition(a, l, n);
         quicksort(a, l, s - 1);
-        quicksort(a, s + 1, r);
+        quicksort(a, s+1, n);
     }
 }
 
@@ -56,10 +57,19 @@ int main()
         a[i] = rand();
         printf("%d\t", a[i]);
     }
-    quicksort(a, 0, n - 1);
+    quicksort(a, 0, n-1);
     printf("\nSorted element are\n");
     for (i = 0; i < n; i++)
         printf("%d\t", a[i]);
     printf("\nBasic Operation Count=%d", count);
     
 }
+/*
+Enter the size of array
+ 5
+Array elements are
+41      18467   6334    26500   19169
+Sorted element are
+41      6334    18467   19169   26500
+Basic Operation Count=13
+*/
