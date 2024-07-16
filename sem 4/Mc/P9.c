@@ -6,13 +6,13 @@
 int main () 
 {
   char ch = 'c';
-  if(ch >= 'a' && ch < = 'z')
+  if(ch >='a' && ch <='z')
   {
-    PINSEL0 = Ch;
+    PINSEL0 = ch;
   }
-  else if (ch >= 'A' && ch< = 'Z')
+  else if(ch >='A' && ch<='Z')
   {
-    PINSEL0 = Ch;
+    PINSEL0 = ch;
   }
   else
     PINSEL0=ch;
