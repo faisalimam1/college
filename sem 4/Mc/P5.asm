@@ -1,4 +1,4 @@
-;Develop an ALP to find the largest member in the array of 32 nás.
+;Develop an ALP to find the largest number in the array of 32 nos. 
 
   AREA, LARGEST, CODE, READONLY
 ENTRY
