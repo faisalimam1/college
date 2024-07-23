@@ -7,18 +7,18 @@ void greedy(int n, int m, float p[], float w[])
     float profit = 0, max;
     int i, k, count;
     for (count = 0; count < n; count++) 
-	{
-        max = 0;
+    {
+	max = 0;
         for (i = 0; i < n; i++) 
-		{
+	{
             if (((p[i] / w[i]) > max)) 
-			{
+	    {
                 k = i;
                 max = p[i] / w[i];
             }
         }
         if (w[k] <= m) 
-		{
+	{
             printf("item %d with profit %f is selected\n", (k+1), p[k]);
             profit += p[k];
             m -= w[k];
@@ -35,7 +35,7 @@ void greedy(int n, int m, float p[], float w[])
 void main() 
 {
     int n, m,i;
-	float p[1000],w[1000];
+    float p[1000],w[1000];
     printf("Enter the no. of items: ");
     scanf("%d", &n);
     
