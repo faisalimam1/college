@@ -44,3 +44,14 @@ int main() {
     
     return 0;
 }
+/*
+Enter no of elements:5
+Enter the elements in ascending order:1 2 3 4 5
+Eneter the sum:10
+Subset 1
+1 2 3 4
+subset 2
+1 4 5
+subset 3
+2 3 5
+*/
