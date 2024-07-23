@@ -57,3 +57,17 @@ int main() {
     printf("\nTotal number of solutions: %d\n", nqueen(n));
     return 0;
 }
+/*
+Enter the size of chessboard: 4
+Solution 1
+X Q X X
+X X X Q
+Q X X X
+X X Q X
+Solution 2
+X X Q X
+Q X X X
+X X X Q
+X Q X X
+Total no of solutions: 2
+*/
