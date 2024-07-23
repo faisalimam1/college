@@ -1,37 +1,41 @@
-// warshals
-//prg 3b
-
 #include<stdio.h>
-
-void warshall(int r[][10], int n) 
+void warshal(int A[][10],int n)
 {
-    for (int k = 0; k < n; k++) 
-    {
-        printf("\nR(%d)\n", k);
-        for (int i = 0; i < n; i++) 
-        {
-            for (int j = 0; j < n; j++) 
-            {
-                r[i][j] = r[i][j] || (r[i][k] && r[k][j]);
-                printf("%d\t", r[i][j]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-    }
+ for(int k=1;k<=n;k++)
+     for(int i=1;i<=n;i++)
+         for(int j=1;j<=n;j++)
+             A[i][j]=A[i][j] || (A[i][k] && A[k][j]);
 }
-
-int main() 
+ 
+void main() 
 {
-    int n, r[10][10];
-    printf("Enter the number of vertices: ");
-    scanf("%d", &n);
-
-    printf("Enter the adjacency matrix: \n");
-    for (int i = 0; i < n; i++) 
-    {
-        for (int j = 0; j < n; j++)
-            scanf("%d", &r[i][j]);
-    }
-    warshall(r, n);
+ int n, adj[10][10];
+ printf("Enter no. of Vertices: ");
+ scanf("%d",&n);
+ printf("Enter the adjacency matrix\n");
+ for(int i=1;i<=n;i++)
+     for(int j=1;j<=n;j++)
+         scanf("%d",&adj[i][j]);
+ warshal(adj,n);
+ 
+ printf("Transitive closure of the given graph is\n");
+ for(int i=1;i<=n;i++)
+ { 
+    for(int j=1;j<=n;j++)
+         printf("%d ",adj[i][j]);
+    printf("\n");
+ }
 }
+/*
+Enter no. of Vertices: 4
+Enter the adjacency matrix
+0 1 0 0
+0 0 0 1
+0 0 0 0
+1 0 1 0
+Transitive closure of the given graph is
+1 1 1 1
+1 1 1 1
+0 0 0 0
+1 1 1 1
+*/
