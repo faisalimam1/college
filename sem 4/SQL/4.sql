@@ -1,24 +1,24 @@
-CREATE OR REPLACE TRIGGER salary_difference_trigger
-BEFORE INSERT OR UPDATE OR DELETE ON customers
+
+CREATE OR REPLACE TRIGGER T1 
+BEFORE DELETE OR INSERT OR UPDATE ON CUSTOMER 
+
 FOR EACH ROW
+WHEN (NEW.ID>0)
+
 DECLARE
- old_salary customers.salary%TYPE;
- new_salary customers.salary%TYPE;
+
+SAL_DIFF NUMBER;
+
 BEGIN
- IF INSERTING OR UPDATING THEN
- old_salary := NVL(:OLD.salary, 0); -- Get the old salary, handle NULL 
-value
- new_salary := NVL(:NEW.salary, 0); -- Get the new salary, handle NULL 
-value
- DBMS_OUTPUT.PUT_LINE('Salary Difference: ' || (new_salary -
-old_salary));
- ELSIF DELETING THEN
- old_salary := NVL(:OLD.salary, 0); -- Get the old salary, handle NULL 
-value
- DBMS_OUTPUT.PUT_LINE('Salary Difference: ' || -old_salary);
- END IF;
+
+SAL_DIFF:= :NEN.SALARY-: OLD.SALARY;
+
+DBMS_OUTPUT.PUT_LINE ('OLD SALARY='||:OLD.SALARY);
+DBMS_OUTPUT.PUT_LINE ('NEW SALARY='||:NEW.SALARY);
+DBMS_OUTPUT.PUT_LINE ('SALARY DIFFERENCE='||:SAL_DIFF);
+
 END;
---set serveroutput on;
---update customers
---  set salary=65000
---  where id=123
+--SET SERVEROUTPUT ON;
+--UPDATE CUSTOMER
+-- SET SALARY= 10000
+-- WHERE ID=123;
