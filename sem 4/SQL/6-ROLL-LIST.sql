@@ -31,3 +31,4 @@ END;
 /
 --set serveroutput on;
 --execute roll_list;
+--select * from n_rollcall;
