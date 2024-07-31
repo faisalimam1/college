@@ -22,7 +22,6 @@
  				v[i][j]=max(v[i-1][j],p[i]+v[i-1][j-w[i]]);
  		}
     }
- 	printf("Hello\n");
  	for(i=0;i<=n;i++)
  	{
  		for(j=0;j<=m;j++)
