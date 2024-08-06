@@ -55,3 +55,4 @@ all pair shortest path
 5 13 1 999
 4 12 8 999
 7 2 3 999
+*/
