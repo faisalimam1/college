@@ -51,3 +51,5 @@ $ns at 4.0 "$ftp0 stop"
 $ns at 4.5 "$cbr0 stop"
 $ns at 5.0 "finish"
 $ns run
+
+#ns lab1.tcl
