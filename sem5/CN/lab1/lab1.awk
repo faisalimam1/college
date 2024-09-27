@@ -18,3 +18,5 @@ END{
 	printf "\n No. of TCP Packets dropped %d", tcpPkt;
 }
 # awk -f lab1.awk out.tr
+# No. of CBR packets dropped 7
+# No. of TCP Packets dropped 13
