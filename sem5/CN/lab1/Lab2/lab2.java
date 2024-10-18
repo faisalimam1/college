@@ -116,3 +116,42 @@ break;
 return rem;
 }
 }
+
+/*
+ Enter number of bits in message : 
+5
+
+ Enter message bits : 
+1
+0
+1
+1
+0
+
+ Enter number of bits in gen : 
+3
+
+ Enter gen bits : 
+1
+0
+1
+
+ Message bits are : 10110
+ Generators bits are : 101
+ Appended message is : 1011000
+ Transmitted message from the transmitter is : 
+1011010
+ Enter received message of 7 bits at receiver end : 
+
+1
+0
+1
+1
+0
+1
+0
+
+ Received message is :
+1011010
+ There is No Error in the received message!!!
+ */
