@@ -1,5 +1,3 @@
-
-Program:
 import java.io.*;
 class crc
 {
@@ -114,6 +112,8 @@ break;
 return rem;
 }
 }
+
+/*
 OUTPUT:Enter the number of bits in message:
 5
 Enter message bits:
@@ -141,3 +141,6 @@ Enter received message of 7 bits at receiver end:
 0
 1
 1
+Recieved message is : 1011011
+There is Error in the recieved message!!!
+*/
