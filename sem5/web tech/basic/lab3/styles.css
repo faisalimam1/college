@@ -1,0 +1,28 @@
+h2{
+
+    color: orange;
+}
+
+h3{
+    color: red;
+}
+
+hr{ border-top: 1px dashed red;}
+
+p{
+font-family:Cursive; }
+
+div {
+ background-color: green; 
+ height: auto;
+ width: auto;
+}
+
+span{
+        color: #2ecc71;
+}
+
+a{
+  color: hotpink;
+}
+
