@@ -5,6 +5,30 @@
 	<title>login-page</title>
 	<style> 
 input[type=submit]{
-  background-co
+  background-color: #1E90FF;
+  border: none;
+  color: white;
+  padding: auto;
+  text-decoration: none;
+  margin: auto;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style="background-color:#FFF8DC;">
+
+<h1>Welcome to My page</h1>
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+	  <label for="username"><b>Username</b></label><br>
+        <input type="text" name="username" placeholder="Username" required><br>
+	 <label for="password"><b>Password</b></label><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+	
+        <input type="submit" value="Login">
+  </div>
+  </form>
+</div>
 </body>
 </html>
