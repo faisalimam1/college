@@ -13,12 +13,12 @@ public class DatagramApp {
         while (true) {
             int c = System.in.read();
             switch (c) {
-                case -1: // EOF
+                case -1: 
                     System.out.println("Server Quits.");
                     return;
-                case '\r': // Ignore carriage return
+                case '\r':
                     break;
-                case '\n': // End of message
+                case '\n':
                     ds.send(new DatagramPacket(buffer, pos, InetAddress.getLocalHost(), clientPort));
                     pos = 0;
                     break;
@@ -52,3 +52,17 @@ public class DatagramApp {
         }
     }
 }
+/*
+output 
+1)TERMINAL 1
+javac DatagramApp.java
+java DatagramApp server
+Server started. Type messages to send to the client:
+Hiii hello
+
+2)TERMINAL 2
+java DatagramApp
+Client started. Waiting for messages...
+Received: Hiii hello
+
+*/
