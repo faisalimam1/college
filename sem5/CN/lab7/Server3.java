@@ -35,3 +35,15 @@ System.out.println("An error occured while opening the file");
 } 
 } 
 }
+
+/*
+Output: 
+1. Open two terminals and create files client.java and Server.java 
+2. Open a terminal and run the server program and provide the filename to 
+send 
+3.Open one more terminal,run the client programand provide the IP 
+address of the server(Loopback address) 
+4.Type “start” at the client side. 
+Server side: 
+Client side: 
+*/
