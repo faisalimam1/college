@@ -53,3 +53,8 @@ swp.simulateAckPacket(2);
 swp.simulateAckPacket(3);
 }
 }
+
+/*
+Output:
+just run the programs
+*/
