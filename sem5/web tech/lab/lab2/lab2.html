@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Table</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Table header style */
+        thead th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Table footer style */
+        tfoot td {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* Row color options */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e9f7ef;
+        }
+
+        /* Lab hours */
+        .lab {
+            background-color: #FFDDC1;
+        }
+
+        /* Elective hours */
+        .elective {
+            background-color: #C1E1FF;
+        }
+
+        /* Colspan and rowspan highlights */
+        .colspan {
+            background-color: #FFD700;
+        }
+
+        .rowspan {
+            background-color: #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Time Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day/Time</th>
+                <th>9:00 - 10:00</th>
+                <th>10:00 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 1:00</th>
+                <th>Lunch</th>
+                <th>2:00 - 3:00</th>
+                <th>3:00 - 4:00</th>
+                <th>4:00 - 5:00</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>TOC</td>
+                <td>SEPM</td>
+                <td class="lab" colspan="2">CN lab</td>
+                <td rowspan="6">Break</td>
+                <td>AI</td>
+                <td class="elective">CN</td>
+                <td>RM&IPR</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td class="colspan" colspan="2">Mini Project</td>
+                <td>AI</td>
+                <td>TOC</td>
+                <td class="lab">Insync</td>
+                <td>RM</td>
+                <td>CN</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>CN</td>
+                <td>TOC</td>
+                <td>SEPM</td>
+                <td>AI</td>
+                <td>CN</td>
+                <td>Web Lab</td>
+                <td>CN Lab</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>SEPM</td>
+                <td>RM</td>
+                <td class="lab" colspan="2">Library</td>
+                <td>TOC</td>
+                <td class="elective">AI</td>
+                <td>AI tut</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>CN</td>
+                <td>TOC</td>
+                <td>CN</td>
+                <td>SEPM tut</td>
+                <td>EVS</td>
+                <td>NCMC</td>
+                <td>Insync</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="9">Class Timetable for Semester 5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
