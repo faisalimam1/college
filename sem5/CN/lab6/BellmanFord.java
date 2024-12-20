@@ -101,7 +101,7 @@ destinationnode++)
 
  if (vertex == destination) 
 
- System.out.println("distance of source " + source + " to “ + vertex + " is " + 
+ System.out.println("distance of source " + source + " to" + vertex + " is " + 
 
 distances[vertex]);
 
