@@ -15,3 +15,13 @@ public class App
         System.out.println("Is empty:"+StringUtils.isEmpty(""));
     }
 }
+
+/**
+output:
+Hello World!
+Starts with:true
+Ends with:false
+Trimmed:Hii Faisal
+Is equals:false
+Is empty:true
+**/
