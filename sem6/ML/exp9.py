@@ -20,3 +20,11 @@ print(y_predict)
 from sklearn.metrics import accuracy_score
 accu= accuracy_score(y_test, y_predict)
 print(f"accuracy of naive bayes:{accu}%")
+#extra code
+n_samples=10
+plt.figure(figsize=(20,10))
+for i in range(n_samples):
+  ax=plt.subplot(1,n_samples,i+1)
+  ax.imshow(x_test[i].reshape(64,64),cmap='grey')
+  ax.set_title(f"{y_predict[i]}\nTrue:{y_test[i]}")
+plt.show()
