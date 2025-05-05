@@ -20,3 +20,7 @@ print(y_predict)
 from sklearn.metrics import accuracy_score
 accu= accuracy_score(y_test, y_predict)
 print(f"accuracy of decision tree:{accu*100}%")
+from sklearn import tree
+plt.figure(figsize=(15,10))
+tree.plot_tree(dtclf, filled=True,feature_names=dataset.feature_names)
+plt.show()
