@@ -28,3 +28,9 @@ for i in range(n_samples):
   ax.imshow(x_test[i].reshape(64,64),cmap='grey')
   ax.set_title(f"{y_predict[i]}\nTrue:{y_test[i]}")
 plt.show()
+
+#extra codes
+new_sample=np.array([x_test[0]])
+prediction=dtclf.predict(new_sample)
+prediction_class="Benign" if prediction==1 else "Malignant"
+print(f"Predicted class :{prediction_class}")
