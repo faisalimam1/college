@@ -10,15 +10,15 @@ from sklearn.cluster import KMeans
 data = load_breast_cancer()
 df = pd.DataFrame(data.data, columns=data.feature_names)
 
-# Standardize the data
+# Standardize
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 
-# Dimensionality reduction for visualization
+# Dimensionality
 pca = PCA(n_components=2)
 reduced_data = pca.fit_transform(scaled_data)
 
-# Apply KMeans
+#KMeans
 kmeans = KMeans(n_clusters=2, random_state=42)
 kmeans.fit(reduced_data)
 labels = kmeans.labels_
