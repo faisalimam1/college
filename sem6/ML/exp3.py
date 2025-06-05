@@ -1,16 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-#scikit learn library
+
 from sklearn import datasets
-#load iris dataset that will be in dictionary-key value pair
+
 iris=datasets.load_iris()
-'''
-print(iris.keys())
-print(iris["data"])
-print(iris["target_names"])
-print(iris["target"])
-print(iris["DESCR"])
-'''
+
 df=pd.DataFrame(iris['data'],columns=iris['feature_names'])
 #df
 from sklearn.preprocessing import StandardScaler
@@ -18,7 +12,7 @@ scaler= StandardScaler()
 scaler.fit(df)
 scaled_data=scaler.transform(df)
 #print(scaled_data)
-#apply PCA by importing
+
 from sklearn.decomposition import PCA
 pca=PCA(n_components=4)
 pca.fit(scaled_data)
