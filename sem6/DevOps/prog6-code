@@ -1,1 +1,4 @@
 mvn archetype:generate -DgroupId=sania_devops -DartifactId=p6 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+git init
+git remote add origin "
