@@ -1,4 +1,7 @@
 mvn archetype:generate -DgroupId=sania_devops -DartifactId=p6 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
 git init
-git remote add origin "
+git remote add origin "https://github.com/123sania456789/mvn.git"
+git add .
+git commit -m "initial commit"
+git push -u origin main
