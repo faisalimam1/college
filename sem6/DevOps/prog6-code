@@ -1,1 +1,1 @@
-mvn archetype:generate -DgroupId=devops -DartifactId=p6 -DarchetypeArtifactId=maven-archetype-artifact-quickstart DinteractiveMode=false
+mvn archetype:generate -DgroupId=sania_devops -DartifactId=p6 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
