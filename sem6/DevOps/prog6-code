@@ -5,3 +5,30 @@ git remote add origin "https://github.com/123sania456789/mvn.git"
 git add .
 git commit -m "initial commit"
 git push -u origin main
+
+
+pipeline {
+    agent any
+
+    tools {
+        maven 'MAVEN_HOME'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/123sania456789/devops.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                bat 'mvn clean install'
+            }
+        }
+        stage('Test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+    }
+}
